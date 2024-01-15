@@ -14,6 +14,11 @@
         <li>Edge Computing</li>
         <li>Security</li>
       </ul>
+      <h4>$ affiliation</h4>
+      <ul>
+        <li>株式会社ドワンゴ インターン</li>
+        <li>電気通信大学 履修証明プログラム学生スタッフ</li>
+      </ul>
 
       <h4>$ qualifications</h4>
       <ul>
@@ -21,6 +26,8 @@
         <li>実用英語技能検定 準1級 (2021.3)</li>
         <li>基本情報技術者 (2019.11)</li>
         <li>応用情報技術者 (2023.11)</li>
+        <li>エンベデッドシステムスペシャリスト (2023.12)</li>
+        <li>TOEIC 750点</li>
       </ul>
 
       <h4>$ awarded</h4>
@@ -33,6 +40,8 @@
         <li>SecHack365 優秀修了 (2022)</li>
         <li>UEC BugBountry Contest 優秀賞(2022)</li>
         <li>技育展2022 インフラ・セキュリティ部門 優秀賞(2022)</li>
+        <li>U☆PoC～UECアイディア実証コンテスト～ B-Storm賞(2023)</li>
+        <li>JPHACKS 2023 Hack Day 東京会場 Jストリーム賞受賞 & Award Day進出(2023)</li>
       </ul>
     </b-container>
   </div>
