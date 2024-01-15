@@ -220,7 +220,7 @@ export default {
 };
 </script>
 
-<style scoped lang="scss" scoped>
+<style scoped lang="scss">
 @import "node_modules/bootstrap/scss/bootstrap";
 
 /* 配色設定 */
