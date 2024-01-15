@@ -1,15 +1,9 @@
-<script setup lang="ts">
-//動的srcをvueに認識させるための変換ツール
-const convertImgSrc = (src: string): string => {
-  return new URL(src, import.meta.url).href;
-};
-</script>
 <template>
   <div class="jumbotron jumbotron-fluid text-dark mb-0">
     <div class="container text-center py-5">
       <b-img
         class="avatar"
-        :src="convertImgSrc(`../../assets/img/icon.png`)"
+        src="/assets/img/icon.png"
         alt="My Photo"
         rounded="circle"
         width="200"
