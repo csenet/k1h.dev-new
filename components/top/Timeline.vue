@@ -206,6 +206,13 @@ export default {
           isDot: false,
         },
         {
+            date: "2023年3月",
+            title: "ICTとラブルシューティングコンテスト2022",
+            description: "本戦3位<br>結束baud",
+            link: "https://icttoracon.net/archives/8986",
+            isDot: false,
+        },
+        {
           date: "2023年6月",
           title: "Interop ShowNet STM",
           description: "ShowNet STMとしてネットワークの構築補助",
