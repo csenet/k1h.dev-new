@@ -38,10 +38,13 @@
         <li>SSH生徒研究発表会 生徒投票賞 (2020)</li>
         <li>Discovery Hackathon 最優秀賞 (2021)</li>
         <li>SecHack365 優秀修了 (2022)</li>
-        <li>UEC BugBountry Contest 優秀賞(2022)</li>
+        <li>UEC BugBountry Contest 2022 優秀賞</li>
         <li>技育展2022 インフラ・セキュリティ部門 優秀賞(2022)</li>
-        <li>U☆PoC～UECアイディア実証コンテスト～ B-Storm賞(2023)</li>
-        <li>JPHACKS 2023 Hack Day 東京会場 Jストリーム賞受賞 & Award Day進出(2023)</li>
+        <li>U☆PoC～UECアイディア実証コンテスト2023～ B-Storm賞</li>
+        <li>JPHACKS 2023 Hack Day 東京会場 Jストリーム賞受賞 & Award Day進出</li>
+        <li>ICTトラブルシューティングコンテスト2022 本戦3位</li>
+        <li>ICTトラブルシューティングコンテスト2023 準優勝</li>
+        <li>U☆PoC～UECアイディア実証コンテスト2024～ 多摩信用金庫賞,G&N賞,B-STORM賞</li>
       </ul>
     </b-container>
   </div>
