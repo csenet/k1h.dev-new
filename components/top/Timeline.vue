@@ -167,7 +167,7 @@ export default {
         {
           date: "2022年10月",
           title: "2022年 SPRESENSE™ 活用コンテスト",
-          description: `<a href="https://elchika.com/article/eda17074-24e7-49a9-8a44-d38c37cca581/">Eltresを使ったCO2濃度監視システム</a><br><a href="Spresenseでプラレール衝突防止システム">Spresenseでプラレール衝突防止システム</a>`,
+          description: `<a href="https://elchika.com/article/eda17074-24e7-49a9-8a44-d38c37cca581/">Eltresを使ったCO2濃度監視システム</a><br>Spresenseでプラレール衝突防止システム`,
           link: "https://elchika.com/promotion/spresense2022/",
           isDot: false,
         },
