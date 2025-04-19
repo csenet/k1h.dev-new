@@ -3,6 +3,7 @@
     <TopHead />
     <TopAboutme />
     <TopTimeline />
+    <TopWorks />
     <!-- <TopSlideshow /> -->
   </div>
 </template>

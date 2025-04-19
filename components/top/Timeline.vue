@@ -1,7 +1,12 @@
 <script setup>
 //動的srcをvueに認識させるための変換ツール
 const convertImgSrc = (src) => {
-  return new URL(src, import.meta.url).href;
+  // 既に絶対パスの場合はそのまま返す
+  if (src.startsWith('/') || src.startsWith('http')) {
+    return src;
+  }
+  // 相対パスの場合は、publicディレクトリを基準に変換
+  return `/${src.replace('../../', '')}`;
 };
 </script>
 <template>
@@ -49,7 +54,7 @@ export default {
           date: "2018年4月",
           title: '東京工業大学附属<br class="d-block d-sm-none">科学技術高等学校入学',
           engTitle: "情報・コンピュータサイエンス分野",
-          icon: "../../assets/img/school.svg",
+          icon: "/assets/img/school.svg",
           isDot: true,
         },
         {
@@ -91,7 +96,7 @@ export default {
           date: "2021年4月",
           title: "電気通信大学入学",
           engTitle: "I類コンピュータサイエンスプログラム",
-          icon: "../../assets/img/school.svg",
+          icon: "/assets/img/school.svg",
           isDot: true,
         },
         {
