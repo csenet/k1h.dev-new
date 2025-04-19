@@ -267,7 +267,9 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "node_modules/bootstrap/scss/bootstrap";
+/* Bootstrapの変数を直接定義 */
+$secondary: #6c757d;
+$dark: #343a40;
 
 /* 配色設定 */
 $LINE: $secondary;

@@ -2,8 +2,12 @@
 import { createResolver } from '@nuxt/kit'
 const { resolve } = createResolver(import.meta.url)
 export default defineNuxtConfig({
-  target: 'static',
+  ssr: true,
+  nitro: {
+    preset: 'static'
+  },
   devtools: { enabled: true },
+
   components: [
     {
       prefix: 'Top',
@@ -11,17 +15,20 @@ export default defineNuxtConfig({
       global: true,
     },
   ],
+
   css: [
     "bootstrap/dist/css/bootstrap.css",
-    "bootstrap-vue-3/dist/bootstrap-vue-3.css",
   ],
+
   vite: {
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@import "@/assets/css/morokai.scss";',
+          additionalData: '@use "@/assets/css/morokai.scss" as morokai;',
         },
       },
     },
   },
+
+  compatibilityDate: '2025-04-19',
 })

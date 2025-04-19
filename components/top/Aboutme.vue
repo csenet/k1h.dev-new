@@ -16,8 +16,9 @@
       </ul>
       <h4>$ affiliation</h4>
       <ul>
-        <li>株式会社ドワンゴ インターン</li>
-        <li>電気通信大学 履修証明プログラム学生スタッフ</li>
+        <li>電気通信大学 UEC-CSIRT 技術支援員</li>
+        <li>電気通信大学 共創進化スマート社会実現推進機構 共創進化スマート大学実現部門 技術支援員</li>
+        <li>電気通信大学 ピクトラボ 技術支援員</li>
       </ul>
 
       <h4>$ qualifications</h4>
@@ -57,14 +58,14 @@ export default {
 </script>
 
 <style lang="scss">
-@import "assets/css/morokai";
+/* モロカイカラースキームの変数を使用 */
 .jumbotron-fluid {
-  background-color: $bg;
-  color: $text;
+  background-color: morokai.$bg;
+  color: morokai.$text;
 }
 
 pre {
-  color: $text;
+  color: morokai.$text;
 }
 
 ul {
