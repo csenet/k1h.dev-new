@@ -14,7 +14,7 @@
         <font-awesome-icon icon="fa-brands fa-twitter" />
       </a>
       <a href="https://github.com/csenet">
-        <font-awesome-icon icon="github" size="2x" :style="{ color: 'gray' }" />
+        <font-awesome-icon icon="fa-brands fa-github" size="2x" :style="{ color: 'gray' }" />
       </a>
       <p>Email: <a href="mailto:admin@k1h.dev">admin@k1h.dev</a></p>
     </div>
