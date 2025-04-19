@@ -1,12 +1,12 @@
 <template>
   <div>
-    <b-jumbotron fluid class="mb-0 py-5">
-      <b-container>
+    <div class="jumbotron jumbotron-fluid mb-0 py-5">
+      <div class="container">
         <div class="text-center">
           <h1>Gallery</h1>
           <p>今まで作成したものや携わった作品です<br />Worksで詳細が見れます</p>
         </div>
-        <b-container style="max-width: 600px">
+        <div class="container" style="max-width: 600px">
           <b-carousel
             id="carousel-1"
             v-model="slide"
@@ -31,9 +31,9 @@
             </b-carousel-slide>
           </b-carousel>
           <h4 class="text-center pt-3">{{ data[slide].title }}</h4>
-        </b-container>
-      </b-container>
-    </b-jumbotron>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

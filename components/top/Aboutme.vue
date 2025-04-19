@@ -1,6 +1,6 @@
 <template>
   <div class="jumbotron jumbotron-fluid mb-0">
-    <b-container class="py-5">
+    <div class="container py-5">
       <h4>$ whoami</h4>
       <ul>
         <li>name : VOID</li>
@@ -47,7 +47,7 @@
         <li>ICTトラブルシューティングコンテスト2023 準優勝</li>
         <li>U☆PoC～UECアイディア実証コンテスト2024～ 多摩信用金庫賞,G&N賞,B-STORM賞</li>
       </ul>
-    </b-container>
+    </div>
   </div>
 </template>
 

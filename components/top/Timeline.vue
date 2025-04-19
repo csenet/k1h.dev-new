@@ -6,7 +6,7 @@ const convertImgSrc = (src) => {
 </script>
 <template>
   <div class="jumbotron jumbotron-fluid text-dark mt-0 mb-0 pb-5 bg-light">
-    <b-container class="py-5">
+    <div class="container py-5">
       <div class="text-center">
         <h1 class="display-5">Activity</h1>
         <p>これまでの活動について</p>
@@ -34,7 +34,7 @@ const convertImgSrc = (src) => {
           </div>
         </li>
       </ul>
-    </b-container>
+    </div>
   </div>
 </template>
 

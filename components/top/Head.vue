@@ -1,15 +1,13 @@
 <template>
   <div class="jumbotron jumbotron-fluid text-dark mb-0">
     <div class="container text-center py-5">
-      <b-img
-        class="avatar"
+      <img
+        class="avatar rounded-circle"
         src="/assets/img/icon.png"
         alt="My Photo"
-        rounded="circle"
         width="200"
         height="200"
-      >
-      </b-img>
+      />
       <h1 class="display-5 pt-3">VOID</h1>
       <p>Student, Engineer</p>
       <a href="https://twitter.com/k1h_tech">
