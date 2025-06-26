@@ -21,7 +21,7 @@ const timeline = timelineData;
         <h1 class="display-5">Activity</h1>
         <p>これまでの活動について</p>
       </div>
-      <ul class="timeline">
+      <ul class="timeline" role="list" aria-label="時系列の活動履歴">
         <li v-for="(item, index) in timeline" ref="content" v-bind:key="index">
           <p class="date">{{ item.date }}</p>
           <div v-bind:class="[item.isDot ? 'content-dot' : '', 'content']">
@@ -131,7 +131,7 @@ $DOT: $dark;
 }
 
 /* for Desktop */
-@media (min-width: 640px) {
+@media (min-width: 650px) {
   .timeline {
     li {
       margin-bottom: 0;
