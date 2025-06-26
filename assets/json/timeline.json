@@ -194,7 +194,7 @@
     "isDot": false
   },
   {
-    "date": "2023年10月〜",
+    "date": "2023年10月〜2025年3月",
     "title": "株式会社ドワンゴインターン",
     "description": "動画配信基盤の開発",
     "isDot": false
@@ -211,6 +211,12 @@
     "title": "JPHACKS 2023",
     "description": "Hack Day 東京会場 Jストリーム賞受賞 & Award Day進出<br>Award Dayスマートホームメイド<br>TK_2313:高輪ﾊﾞｯﾄﾞｹﾞｰﾄｳｪｲ前ﾊｰﾄﾞｳｪｱ幼稚園",
     "link": "https://jphacks.com/2023/result/",
+    "isDot": false
+  },
+  {
+    "date": "2025年5月〜",
+    "title": "LayerX株式会社インターン",
+    "description": "SRE",
     "isDot": false
   }
 ]
