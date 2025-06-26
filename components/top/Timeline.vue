@@ -192,7 +192,7 @@ export default {
         },
         {
           date: "2022年12月",
-          title: "ELTRESアイデアコンテスト202",
+          title: "ELTRESアイデアコンテスト2022",
           description: "ELTRESとAIを用いた列車運行支援システム",
           link: "https://eltres-iot.jp/ideacon2022/",
           isDot: false,
