@@ -57,7 +57,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 /* モロカイカラースキームの変数を使用 */
 .jumbotron-fluid {
   background-color: morokai.$bg;
@@ -69,6 +69,12 @@ pre {
 }
 
 ul {
-  list-style: "-> ";
+  list-style-type: none;
+  
+  li::before {
+    content: "-> ";
+    color: morokai.$green;
+    font-weight: bold;
+  }
 }
 </style>
