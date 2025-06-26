@@ -94,6 +94,22 @@ const closeModal = () => {
   showModal.value = false;
   selectedWork.value = null;
 };
+
+// ESCキーでモーダルを閉じる
+onMounted(() => {
+  const handleEscKey = (event) => {
+    if (event.key === 'Escape' && showModal.value) {
+      closeModal();
+    }
+  };
+  
+  document.addEventListener('keydown', handleEscKey);
+  
+  // クリーンアップ
+  return () => {
+    document.removeEventListener('keydown', handleEscKey);
+  };
+});
 </script>
 
 <template>
@@ -106,8 +122,10 @@ const closeModal = () => {
       
       <div class="row">
         <div v-for="(work, index) in works" :key="index" class="col-md-4 mb-4">
-          <div class="card work-card h-100" @click="openModal(work)">
-            <img :src="`/img/${work.slag}/thumnail.jpg`" class="card-img-top" :alt="work.title">
+          <div class="card work-card h-100" @click="openModal(work)" role="button" tabindex="0" 
+               :aria-label="`${work.title}の詳細を表示`"
+               @keydown.enter="openModal(work)" @keydown.space="openModal(work)">
+            <img :src="`/img/${work.slag}/thumnail.jpg`" class="card-img-top" :alt="`${work.title}のサムネイル画像`">
             <div class="card-body">
               <h5 class="card-title">{{ work.title }}</h5>
               <p class="card-subtitle text-muted">{{ work.subTitle }}</p>
@@ -118,10 +136,12 @@ const closeModal = () => {
       </div>
       
       <!-- モーダル -->
-      <div v-if="showModal" class="modal-overlay" @click.self="closeModal">
+      <div v-if="showModal" class="modal-overlay" @click.self="closeModal" 
+           role="dialog" aria-modal="true" :aria-labelledby="selectedWork ? 'modal-title' : undefined">
         <div class="modal-content">
-          <button class="close-button" @click="closeModal">&times;</button>
+          <button class="close-button" @click="closeModal" aria-label="モーダルを閉じる">&times;</button>
           <div v-if="selectedWork" class="modal-body">
+            <h2 id="modal-title" class="sr-only">{{ selectedWork.title }}の詳細</h2>
             <div v-if="isLoading" class="text-center">
               <div class="spinner-border" role="status">
                 <span class="sr-only">Loading...</span>
@@ -153,9 +173,16 @@ export default {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   
-  &:hover {
+  &:hover, &:focus {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+  }
+  
+  &:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
   }
   
   .card-img-top {
