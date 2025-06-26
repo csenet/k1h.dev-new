@@ -172,7 +172,7 @@ export default {
         {
           date: "2022年10月",
           title: "2022年 SPRESENSE™ 活用コンテスト",
-          description: `<a href="https://elchika.com/article/eda17074-24e7-49a9-8a44-d38c37cca581/">Eltresを使ったCO2濃度監視システム</a><br>Spresenseでプラレール衝突防止システム`,
+          description: `<a href="https://elchika.com/article/eda17074-24e7-49a9-8a44-d38c37cca581/">ELTRESを使ったCO2濃度監視システム</a><br>Spresenseでプラレール衝突防止システム`,
           link: "https://elchika.com/promotion/spresense2022/",
           isDot: false,
         },
@@ -212,7 +212,7 @@ export default {
         },
         {
             date: "2023年3月",
-            title: "ICTとラブルシューティングコンテスト2022",
+            title: "ICTトラブルシューティングコンテスト2022",
             description: "本戦3位<br>結束baud",
             link: "https://icttoracon.net/archives/8986",
             isDot: false,
@@ -354,7 +354,7 @@ $DOT: $dark;
 }
 
 /* for Desktop */
-@media (min-width: 640px) {
+@media (min-width: 650px) {
   .timeline {
     li {
       margin-bottom: 0;

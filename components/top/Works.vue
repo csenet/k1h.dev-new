@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, nextTick } from 'vue';
 
 // 動的srcをvueに認識させるための変換ツール
 const convertImgSrc = (src) => {
@@ -28,11 +28,11 @@ const parseMarkdown = (markdown) => {
     return markdown;
   }
   
-  // markedの設定を変更して、HTMLタグをエスケープしないようにする
+  // markedの設定（セキュリティのため基本的にHTMLをサニタイズする）
   window.marked.setOptions({
     gfm: true,
     breaks: true,
-    sanitize: false, // HTMLタグをエスケープしない
+    sanitize: true, // セキュリティのためHTMLをサニタイズ
     smartLists: true,
     smartypants: false,
     xhtml: false
@@ -42,11 +42,12 @@ const parseMarkdown = (markdown) => {
   return window.marked.parse(markdown);
 };
 
-// モーダル関連の状態
+// モーダル関連の状態  
 const showModal = ref(false);
 const selectedWork = ref(null);
 const modalContent = ref('');
 const isLoading = ref(false);
+const closeButton = ref(null);
 
 // モーダルを開く関数
 const openModal = async (work) => {
@@ -54,6 +55,12 @@ const openModal = async (work) => {
   showModal.value = true;
   isLoading.value = true;
   modalContent.value = '<p>読み込み中...</p>';
+  
+  // フォーカス管理のため、次のティックでボタンにフォーカス
+  await nextTick();
+  if (closeButton.value) {
+    closeButton.value.focus();
+  }
   
   try {
     // about.mdの内容を取得する処理
@@ -106,8 +113,20 @@ const closeModal = () => {
       
       <div class="row">
         <div v-for="(work, index) in works" :key="index" class="col-md-4 mb-4">
-          <div class="card work-card h-100" @click="openModal(work)">
-            <img :src="`/img/${work.slag}/thumnail.jpg`" class="card-img-top" :alt="work.title">
+          <div 
+            class="card work-card h-100" 
+            @click="openModal(work)"
+            @keydown.enter="openModal(work)"
+            @keydown.space="openModal(work)"
+            tabindex="0"
+            role="button"
+            :aria-label="`View details for ${work.title}`"
+          >
+            <img 
+              :src="`/img/${work.slag}/thumnail.jpg`" 
+              class="card-img-top" 
+              :alt="`Screenshot of ${work.title} project`"
+            >
             <div class="card-body">
               <h5 class="card-title">{{ work.title }}</h5>
               <p class="card-subtitle text-muted">{{ work.subTitle }}</p>
@@ -118,10 +137,24 @@ const closeModal = () => {
       </div>
       
       <!-- モーダル -->
-      <div v-if="showModal" class="modal-overlay" @click.self="closeModal">
+      <div 
+        v-if="showModal" 
+        class="modal-overlay" 
+        @click.self="closeModal"
+        @keydown.esc="closeModal"
+        role="dialog"
+        aria-modal="true"
+        :aria-labelledby="'modal-title-' + (selectedWork ? selectedWork.title : '')"
+      >
         <div class="modal-content">
-          <button class="close-button" @click="closeModal">&times;</button>
+          <button 
+            class="close-button" 
+            @click="closeModal"
+            aria-label="Close modal"
+            ref="closeButton"
+          >&times;</button>
           <div v-if="selectedWork" class="modal-body">
+            <h2 :id="'modal-title-' + selectedWork.title" class="sr-only">{{ selectedWork.title }} details</h2>
             <div v-if="isLoading" class="text-center">
               <div class="spinner-border" role="status">
                 <span class="sr-only">Loading...</span>
@@ -153,9 +186,12 @@ export default {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   
-  &:hover {
+  &:hover,
+  &:focus {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
   }
   
   .card-img-top {
@@ -197,6 +233,16 @@ export default {
   border: none;
   cursor: pointer;
   color: #333;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  
+  &:hover,
+  &:focus {
+    background-color: rgba(0, 0, 0, 0.1);
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+  }
 }
 
 .modal-body {

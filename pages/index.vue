@@ -49,23 +49,16 @@ export default {};
   }
 }
 
-@media screen and (min-width: 650px) {
-  .br-pc {
-    display: block;
-  }
-
-  .br-sp {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .br-pc {
-    display: none;
-  }
-
-  .br-sp {
-    display: block;
-  }
+/* Screen reader only utility class */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 </style>

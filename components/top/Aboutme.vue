@@ -58,17 +58,34 @@ export default {
 </script>
 
 <style lang="scss">
+@import '../../assets/css/morokai.scss';
+
 /* モロカイカラースキームの変数を使用 */
 .jumbotron-fluid {
-  background-color: morokai.$bg;
-  color: morokai.$text;
+  background-color: $bg;
+  color: $text;
 }
 
 pre {
-  color: morokai.$text;
+  color: $text;
 }
 
 ul {
   list-style: "-> ";
+  padding-left: 20px;
+}
+
+h4 {
+  color: $green;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+li {
+  margin-bottom: 0.5rem;
 }
 </style>
