@@ -38,10 +38,24 @@ The main page uses a series of section components:
 - `TopSlideshow` - Currently commented out
 
 ### Data Management
-Portfolio projects are managed through `assets/json/works.json` with corresponding detail pages in `assets/works/[project-name]/about.md`.
+- **Portfolio Projects**: `assets/json/works.json` with corresponding detail pages in `assets/works/[project-name]/about.md`
+- **Timeline Data**: `assets/json/timeline.json` contains chronological events and achievements
+- **Asset Organization**: Duplicate structure between `assets/` and `public/assets/` for build compatibility
 
 ### Styling Approach
 - Bootstrap 5 for layout and components
-- Custom SCSS variables in `morokai.scss`
-- Responsive design with custom breakpoints at 650px
+- Custom SCSS variables in `morokai.scss` (Morokai color scheme)
+- Responsive design with custom breakpoints at 650px (`.br-pc`/`.br-sp` classes)
 - Font Awesome icons for social links
+- Global styles defined in `pages/index.vue`
+
+### Build Configuration
+- **Static Generation**: Uses Nuxt's static preset for GitHub Pages deployment
+- **Component Auto-import**: Components in `components/top/` are auto-imported with "Top" prefix
+- **SCSS Processing**: Custom SCSS variables available globally via Vite preprocessor
+- **Bootstrap Integration**: Bootstrap CSS loaded globally, with client-side JS via plugin
+
+### Deployment
+- Builds to `dist/` directory for static hosting
+- Includes `public/CNAME` for custom domain
+- Serves as a personal portfolio showcasing technical projects and career timeline
