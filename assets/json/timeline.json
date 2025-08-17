@@ -220,6 +220,27 @@
     "isDot": false
   },
   {
+    "date": "2025年5月",
+    "title": "CloudNative Days Summer 2025",
+    "description": "学生支援で参加",
+    "link": "https://event.cloudnativedays.jp/cnds2025",
+    "isDot": false
+  },
+  {
+    "date": "2025年7月",
+    "title": "SRE NEXT 2025",
+    "description": "NOC",
+    "link": "https://sre-next.dev/",
+    "isDot": false
+  },
+  {
+    "date": "2025年7月〜8月",
+    "title": "JANOG56 Meeting in Matsue",
+    "description": "若者支援で参加",
+    "link": "https://www.janog.gr.jp/meeting/janog56/",
+    "isDot": false
+  },
+  {
     "date": "2025年8月",
     "title": "Security Camp 2025全国大会ネクスト",
     "description": "参加",
