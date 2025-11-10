@@ -222,7 +222,7 @@
   {
     "date": "2025年5月",
     "title": "CloudNative Days Summer 2025",
-    "description": "学生支援で参加",
+    "description": "若者LT支援で参加",
     "link": "https://event.cloudnativedays.jp/cnds2025",
     "isDot": false
   },
@@ -240,11 +240,30 @@
     "link": "https://www.janog.gr.jp/meeting/janog56/",
     "isDot": false
   },
-    {
-      "date": "2025年8月",
-      "title": "Security Camp 2025 ネクスト",
-      "description": "参加",
-      "link": "https://www.security-camp.or.jp/",
-      "isDot": false
-    }
+  {
+    "date": "2025年8月",
+    "title": "Security Camp 2025 ネクスト",
+    "description": "参加",
+    "link": "https://www.security-camp.or.jp/",
+    "isDot": false
+  },
+  {
+    "date": "2025年10月",
+    "title": "Maker Faire Tokyo 2025",
+    "description": "Young Makers' Award IIJ賞受賞",
+    "link": "https://makezine.jp/event/mft2025/",
+    "isDot": false
+  },
+  {
+    "date": "2025年11月",
+    "title": "Platform Engineering Kaigi 2025",
+    "description": "NOC",
+    "isDot": false
+  },
+  {
+    "date": "2026年1月",
+    "title": "JANOG57 Meeting",
+    "description": "若者支援で参加",
+    "isDot": false
+  }
 ]
