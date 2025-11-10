@@ -240,11 +240,11 @@
     "link": "https://www.janog.gr.jp/meeting/janog56/",
     "isDot": false
   },
-  {
-    "date": "2025年8月",
-    "title": "Security Camp 2025全国大会ネクスト",
-    "description": "参加",
-    "link": "https://www.security-camp.or.jp/",
-    "isDot": false
-  }
+    {
+      "date": "2025年8月",
+      "title": "Security Camp 2025 ネクスト",
+      "description": "参加",
+      "link": "https://www.security-camp.or.jp/",
+      "isDot": false
+    }
 ]
